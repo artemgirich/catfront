@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-
+import { catAnecdot } from './cat-anec.component.data';
+import { AnecfiltrPipe } from '../pipes/anecfiltr.pipe';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-cat-anec',
   standalone: true,
-  imports: [],
+  imports: [AnecfiltrPipe, FormsModule],
   templateUrl: './cat-anec.component.html',
   styleUrl: './cat-anec.component.css'
 })
 export class CatAnecComponent {
-  static linkName : string = "анекдоты про котов"
+  ca = catAnecdot
+  filtrText : string = ""
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { catStrishka } from './cat-strish.component.data';
+import {СatStrish } from './cat-strish.component.data'
 @Component({
   selector: 'app-cat-strish',
   standalone: true,
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './cat-strish.component.css'
 })
 export class CatStrishComponent {
-
+  cstr = catStrishka
 }

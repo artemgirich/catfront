@@ -9,7 +9,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   <header>
     <div class="verh">  
       <img src="{{'vorovKot.jpg'}}" alt="vorovKot" class="vcot"/>
-      <span class="zagolov">ворованные коты </span>
+      <span class="zagolov"><strong>ВОРОВАННЫЕ КОТЫ</strong> </span>
     </div>
   </header>
   <nav>
@@ -20,26 +20,26 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
         ariaCurrentWhenActive="page"
         >{{ln.name}}</a
     >
-    }
+    }    
     
   </nav>
   <router-outlet />
   `,
   styles: [`
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-    a { margin : 10px; padding : 5px;
-        font-family: 'Bebas Neue', cursive;
-  font-size: 1em;
-  
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  background-image: linear-gradient(gold, gold);
-  background-size: 100% 10px;
-  background-repeat: no-repeat;
-  background-position: 100% 0%;
-   transition: background-size .7s, background-position .5s ease-in-out;
-}
+    a {
+      margin : 10px; padding : 5px;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1em;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      background-image: linear-gradient(gold, gold);
+      background-size: 100% 10px;
+      background-repeat: no-repeat;
+      background-position: 100% 0%;
+      transition: background-size .7s, background-position .5s ease-in-out;
+    }
     a:hover {
       background-size: 100% 100%;
       background-position: 0% 100%;
@@ -49,23 +49,21 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
       width : 80px; 
       align: left;      
       }
-    .verh{
-      display : block;
-    }
     .zagolov{
-      font-size : 30px;
-      background-image: url("meh.jpg");
-  background-size: cover;
-  background-clip: text;
-  color: transparent;
+      font-size : 40px;
+      background-image: url('../../public/meh.jpg');
+      background-size: cover;
+      background-clip: text;
+      color: transparent;
       vertical-align: top;
-      text-shadow: 1px 1px 2px rgb(179, 147, 211);
+      font-family: 'Bebas Neue', cursive;
+      
     }
     `]
     
 })
 export class AppComponent {
-  title = 'my-app';
+  
   links = [
     {
       link : '/cat-anec',
@@ -90,4 +88,5 @@ export class AppComponent {
       name : 'клички котов'
     },
   ]
+  
 }

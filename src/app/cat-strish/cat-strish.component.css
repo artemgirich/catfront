@@ -1,0 +1,20 @@
+.fbcont {
+  display: flex;
+}
+.fbimg {
+  width: 100px;
+  height: 100px;
+}
+.fbtxt {
+  max-width: 800px;
+}
+.catstr {
+  width: 800px;
+}
+.cstrcont {
+  border-radius: 10px;
+  background-color: beige;
+  width: 820px;
+  padding: 5px;
+  margin: 5px;
+}
