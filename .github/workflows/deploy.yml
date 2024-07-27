@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.jsыы
         uses: actions/setup-node@v1
       - name: npm install, build, and test
         run: |
