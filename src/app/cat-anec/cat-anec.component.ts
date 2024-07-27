@@ -15,7 +15,7 @@ export class CatAnecComponent {
   ca = catAnecdot
   filtrText : string = ""
   tagClick ($event : MouseEvent):void {
-    this.curTag = ($event.target  as HTMLElement).innerText || ""
+    this.curTag = ($event.target as HTMLElement).innerText || ""
   }
   ubrTag ($event : MouseEvent):void {
     this.curTag = ""
