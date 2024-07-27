@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { catPrimet } from './cat-prim.component.data';
 
 @Component({
   selector: 'app-cat-prim',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './cat-prim.component.css'
 })
 export class CatPrimComponent {
-
+  cp = catPrimet
 }

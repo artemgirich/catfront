@@ -1,10 +1,16 @@
 <h2>анекдоты про котов</h2>
 <h2>поиск</h2>
 <input type="text" [(ngModel)]="filtrText" />
+@if(curTag !== ""){выбран тег :{{curTag}}
+<button (click)="ubrTag($event)">убрать тег</button>
+}
 <br />
 <br />
-@for (an of (ca | anecfiltr : filtrText); track an){
+@for (an of (ca | anecfiltr : filtrText | tagfiltr : curTag); track an){
 <div class="text">
+  @for (t of an.tags ; track t){
+  <span class="tag" (click)="tagClick($event)">{{t}}</span>
+  }
   <h2 class="zagol">{{an.anecName}}</h2>
   <p>{{an.text}}</p>
 </div>

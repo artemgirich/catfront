@@ -8,6 +8,7 @@ import { CatAnec } from '../cat-anec/cat-anec.component.data';
 export class AnecfiltrPipe implements PipeTransform {
 
   transform(value: Array<CatAnec>,  filtr:string): Array<CatAnec> {
+    
     return value.filter((huy)=>{
       return huy.anecName.includes(filtr) || huy.text.includes(filtr)
     });
