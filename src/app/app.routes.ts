@@ -1,4 +1,4 @@
-import { Route, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { CatAnecComponent } from './cat-anec/cat-anec.component';
 import { CatItemsComponent } from './cat-items/cat-items.component';
 import { CatFactsComponent } from './cat-facts/cat-facts.component';

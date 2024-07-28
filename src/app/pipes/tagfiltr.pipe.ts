@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { CatAnec, catAnecdot } from '../cat-anec/cat-anec.component.data';
+import { CatAnec } from '../cat-anec/cat-anec.component.data';
 
 @Pipe({
   name: 'tagfiltr',
@@ -7,7 +7,7 @@ import { CatAnec, catAnecdot } from '../cat-anec/cat-anec.component.data';
 })
 export class TagfiltrPipe implements PipeTransform {
 
-  transform(value: Array<CatAnec>,  tag:string): Array<CatAnec> {
+  transform(value: CatAnec[],  tag:string): CatAnec[] {
     return value.filter((huy)=>{
       return huy.tags.join(" ").includes(tag)
     })

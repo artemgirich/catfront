@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { catStrishka } from './cat-strish.component.data';
-import {СatStrish } from './cat-strish.component.data'
+
 @Component({
   selector: 'app-cat-strish',
   standalone: true,

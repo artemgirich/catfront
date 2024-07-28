@@ -11,13 +11,13 @@ import { TagfiltrPipe } from '../pipes/tagfiltr.pipe';
   styleUrl: './cat-anec.component.css'
 })
 export class CatAnecComponent {
-  curTag : string = ""
+  curTag = ""
   ca = catAnecdot
-  filtrText : string = ""
+  filtrText = ""
   tagClick ($event : MouseEvent):void {
     this.curTag = ($event.target as HTMLElement).innerText || ""
   }
-  ubrTag ($event : MouseEvent):void {
+  ubrTag ():void {
     this.curTag = ""
   }
 }

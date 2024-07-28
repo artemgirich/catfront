@@ -1,6 +1,6 @@
 <h2>стрижки для котов</h2>
 <div class="fbcont">
-  <img src="/zapret.jpg" class="fbimg" />
+  <img src="/zapret.jpg" class="fbimg" alt="желательно не стричь" />
   <div class="fbtxt">
     Шерстяной покров помогает животным регулировать температуру тела, защищает
     кожу от внешних воздействий, не дает телу перегреваться. Стрижка может
@@ -18,6 +18,6 @@
 @for (cs of cstr ; track cs){
 <div class="cstrcont">
   <p>{{cs.name}}</p>
-  <img src="{{cs.str}}" class="catstr" />
+  <img src="{{cs.str}}" class="catstr" alt="{{cs.alt}}" />
 </div>
 }
