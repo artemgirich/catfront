@@ -18,7 +18,7 @@ export class CatAnecComponent {
     this.curTag = ($event.target as HTMLElement).innerText || ""
   }
   tagKeyPress ($event :KeyboardEvent){
-    if ($event.key==="space"){
+    if ($event.key===" "){
       this.curTag = ($event.target as HTMLElement).innerText || ""
     }
   }
