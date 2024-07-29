@@ -17,7 +17,13 @@ export class CatAnecComponent {
   tagClick ($event : MouseEvent):void {
     this.curTag = ($event.target as HTMLElement).innerText || ""
   }
+  tagKeyPress ($event :KeyboardEvent){
+    if ($event.key==="space"){
+      this.curTag = ($event.target as HTMLElement).innerText || ""
+    }
+  }
   ubrTag ():void {
     this.curTag = ""
   }
+
 }
