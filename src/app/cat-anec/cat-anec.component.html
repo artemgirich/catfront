@@ -1,9 +1,24 @@
 <h2>анекдоты про котов</h2>
-<h2>поиск</h2>
-<input type="text" [(ngModel)]="filtrText" />
-@if(curTag !== ""){выбран тег :{{curTag}}
-<button (click)="ubrTag()">убрать тег</button>
-}
+
+<div>
+  <button class="pb" (click)="pb()">
+    <img src="poisk.webp" class="poiskImg" />
+  </button>
+
+  @if(poiskBut){
+
+  <span class="poisk">
+    поиск
+    <input type="text" [(ngModel)]="filtrText" />
+
+    @if(!!curTag){ выбран тег :<span class="tag">{{curTag}}</span>
+    <button (click)="ubrTag()">убрать тег</button>
+    }
+  </span>
+
+  }
+</div>
+
 <br />
 <br />
 @for (an of (ca | anecfiltr : filtrText | tagfiltr : curTag); track an){
@@ -20,5 +35,7 @@
   }
   <h2 class="zagol">{{an.anecName}}</h2>
   <p>{{an.text}}</p>
+  <button (click)="setLike('1','like')"><img /></button>
+  <button (click)="setLike('1','disLike')"><img /></button>
 </div>
 }

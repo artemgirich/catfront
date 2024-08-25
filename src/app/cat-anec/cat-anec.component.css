@@ -13,3 +13,20 @@
   padding: 1px 5px;
   border-radius: 25px;
 }
+.tag:focus {
+  background-color: rgb(121, 124, 146);
+}
+.pb {
+  width: 45px;
+  height: 45px;
+  padding: 0;
+}
+
+.poisk {
+  vertical-align: top;
+}
+.poiskImg {
+  width: 39px;
+  height: 39px;
+  margin: 0;
+}

@@ -8,25 +8,37 @@ import { CatPorodComponent } from './cat-porod/cat-porod.component';
 import { CatKlichComponent } from './cat-klich/cat-klich.component';
 
 export const routes: Routes = [{
+    path: '',
+    redirectTo: 'cat-facts',
+    pathMatch: 'full',
+    data: { caption:"" },
+},{
     path: 'cat-anec',
     component: CatAnecComponent,
+    data: { caption:"анекдоты про котов" },
 },{
     path: 'cat-items',
-    component: CatItemsComponent
+    component: CatItemsComponent,
+    data: { caption:"предметы для котов" },
 },{
     path: 'cat-facts',
-    component: CatFactsComponent
+    component: CatFactsComponent,
+    data: { caption:"факты про котов" },
 },{
     path: 'cat-strish',
-    component: CatStrishComponent
+    component: CatStrishComponent,
+    data: { caption:"стришки для котов" },
 },{
     path: 'cat-prim',
-    component: CatPrimComponent
+    component: CatPrimComponent,
+    data: { caption:"приметы про котов" },
 },{
     path: 'cat-porod',
-    component: CatPorodComponent
+    component: CatPorodComponent,
+    data: { caption:"породы котов" },
 },{
     path: 'cat-klich',
-    component: CatKlichComponent
+    component: CatKlichComponent,
+    data: { caption:"клички для котов" },
 }
 ];

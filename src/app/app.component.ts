@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { routes } from './app.routes';
 
 @Component({
   selector: 'app-root',
@@ -14,13 +15,15 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   </header>
   <nav>
   @for (ln of links; track ln) {
+    @if (ln.data!['caption'] !==""){
     <a
-        routerLink={{ln.link}}
+        routerLink={{ln.path}}
         routerLinkActive="active"
         ariaCurrentWhenActive="page"
-        >{{ln.name}}</a
+        >{{ln.data!['caption']}}</a
     >
-    }    
+    }
+  }    
     
   </nav>
   <router-outlet />
@@ -46,8 +49,7 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
       transition: background-position .7s, background-size .5s ease-in-out;
     }
     .vcot{
-      width : 80px; 
-      align: left;      
+      width : 80px;   
       }
     .zagolov{
       font-size : 40px;
@@ -64,29 +66,6 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   
-  links = [
-    {
-      link : '/cat-anec',
-      name : 'анекдоты про котов'
-    },    {
-      link : '/cat-items',
-      name : 'вещи для котов'
-    },    {
-      link : '/cat-facts',
-      name : 'факты про котов'
-    },    {
-      link : '/cat-strish',
-      name : 'стрижки для котов'
-    },    {
-      link : '/cat-prim',
-      name : 'приметы про котов'
-    },    {
-      link : '/cat-porod',
-      name : 'породы котов'
-    },    {
-      link : '/cat-klich',
-      name : 'клички котов'
-    },
-  ]
+  links = routes
   
 }
