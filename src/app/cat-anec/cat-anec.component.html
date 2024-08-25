@@ -2,7 +2,7 @@
 
 <div>
   <button class="pb" (click)="pb()">
-    <img src="poisk.webp" class="poiskImg" />
+    <img src="poisk.webp" class="poiskImg" alt="кнопка поиска" />
   </button>
 
   @if(poiskBut){
@@ -35,7 +35,7 @@
   }
   <h2 class="zagol">{{an.anecName}}</h2>
   <p>{{an.text}}</p>
-  <button (click)="setLike('1','like')"><img /></button>
-  <button (click)="setLike('1','disLike')"><img /></button>
+  <button (click)="setLike('1','like')"><img alt="лайк" /></button>
+  <button (click)="setLike('1','disLike')"><img alt="дизлайк" /></button>
 </div>
 }
