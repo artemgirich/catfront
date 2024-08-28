@@ -7,12 +7,16 @@ export class LikesService {
 
   constructor() { }
 
-  setLike(anec:string,otsenka:string){ }
+  setLike(anec:string,otsenka:string){
+    anec=otsenka
+  }
   getLike(){
-    
+    this.setLike("1","2")
     
   }
-  getTotalLikes(){}
+  getTotalLikes(){
+    this.getLike()
+  }
 
 
 }
