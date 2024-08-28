@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class LikesService {
 
-  constructor() { }
+  
 
   setLike(anec:string,otsenka:string){
     anec=otsenka
